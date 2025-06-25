@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: bisque;
+    background-color: rgb(255, 210, 196);
 }
 
 #calculator{
@@ -28,15 +28,18 @@ button{
     background-color: rgba(81, 81, 81, 0.800);
     color: bisque;
     border: none;
+    cursor: pointer;
 }
 
 #display{
     width: 99%;
+    color: bisque;
     border: none;
     background-color: rgb(58, 58, 58);
     padding: 10px;
-    font-size: 4em;
+    font-size: 4.5em;
     text-align: left;
+    border-bottom: 5px solid bisque;
 }
 
 button:hover{
@@ -50,4 +53,14 @@ button:hover{
 
 .bisque:hover{
     background-color: rgba(255, 228, 196, 0.785);
+}
+
+button:active{
+    background-color: bisque;
+    color: black;
+}
+
+.bisque:active{
+    background-color: rgba(81, 81, 81, 0.800);
+    color: bisque
 }
