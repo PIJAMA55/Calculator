@@ -3,8 +3,10 @@ let buttons = document.querySelectorAll("button");
 let display = document.getElementById("display");
 
 buttons.forEach(function(bttn) {
-    bttn.addEventListener("click", function() {
-        display.value += bttn.innerText; // Add button's text to input field
+bttn.addEventListener("click", function() {
+if (bttn.id === "answer") return;
+if (bttn.id === "C") return;
+    display.value += bttn.innerText;
 });
 });
 
@@ -13,4 +15,11 @@ C.addEventListener("click", function(){
     display.value = "";
 })
 
-
+let answer = document.getElementById("answer");
+answer.addEventListener("click", function(){
+    try{
+        display.value = eval(display.value);
+    }catch{
+        display.value = "error";
+    }
+});
